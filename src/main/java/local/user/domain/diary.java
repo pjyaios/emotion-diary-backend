@@ -1,16 +1,16 @@
 package local.user.domain;
 
-public class diary {
+public class Diary {
 
     private int id;
     private long createdDate;
     private int emotionId;
     private String content;
 
-    public diary() {
+    public Diary() {
     }
 
-    public diary(int id, long createdDate, int emotionId, String content) {
+    public Diary(int id, long createdDate, int emotionId, String content) {
         this.id = id;
         this.createdDate = createdDate;
         this.emotionId = emotionId;

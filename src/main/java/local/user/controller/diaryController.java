@@ -2,24 +2,25 @@ package local.user.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import local.user.domain.diary;
-import local.user.service.imple.diaryService;
-import local.user.service.inter.diaryServiceInterface;
+import local.user.domain.Diary;
+import local.user.service.DiaryServiceInterface;
 
 @RestController
-public class diaryController {
+public class DiaryController {
 
-    private final diaryServiceInterface _diaryService;
+    private final DiaryServiceInterface _diaryService;
 
-    public diaryController(diaryServiceInterface diaryService) {
-        this._diaryService = new diaryService();
+    @Autowired
+    public DiaryController(DiaryServiceInterface diaryService) {
+        this._diaryService = diaryService;
     }
 
     @GetMapping("/diaries")
-    public List<diary> diary() {
+    public List<Diary> getAll() {
         return _diaryService.getAll();
     }
 }
