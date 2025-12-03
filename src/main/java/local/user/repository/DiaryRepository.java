@@ -1,10 +1,10 @@
-package local.user.service;
+package local.user.repository;
 
 import java.util.List;
 
 import local.user.domain.Diary;
 
-public interface DiaryServiceInterface {
+public interface DiaryRepository {
 
     List<Diary> getAll();
 
